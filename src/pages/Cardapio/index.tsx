@@ -1,10 +1,11 @@
 import React from 'react';
 import styles from './pages/Cardapio/Cardapio.module.scss';
-import Buscador from './pages/Cardapio/Buscador';
+import { ReactComponent as Logo } from 'assets/logo.svg';
+import Buscador from './Buscador';
 import { useState } from 'react';
-import Filtros from './pages/Cardapio/Filtros';
-import Ordenador from './pages/Cardapio/Ordenador';
-import Itens from './pages/Cardapio/Itens';
+import Filtros from './Filtros';
+import Ordenador from './Ordenador';
+import Itens from './Itens';
 
 export default function Cardapio() {
   const [busca, setBusca] = useState('');
@@ -13,7 +14,7 @@ export default function Cardapio() {
   return (
     <main>
       <nav className={styles.menu}>
-
+        <Logo />
       </nav>
       <header className={styles.header}>
         <div className={styles.header__text}>
