@@ -5,6 +5,7 @@ import { useState } from 'react';
 import Filtros from './pages/Cardapio/Filtros';
 import Ordenador from './pages/Cardapio/Ordenador';
 import Itens from './pages/Cardapio/Itens';
+import LogoImage from './pages/Cardapio/LogoImage';
 
 export default function Cardapio() {
   const [busca, setBusca] = useState('');
@@ -13,7 +14,6 @@ export default function Cardapio() {
   return (
     <main>
       <nav className={styles.menu}>
-
       </nav>
       <header className={styles.header}>
         <div className={styles.header__text}>
