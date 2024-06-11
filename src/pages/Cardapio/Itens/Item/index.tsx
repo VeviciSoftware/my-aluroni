@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './Item.module.scss'; 
 import cardapio from '../itens.json';
 import classNames from 'classnames';

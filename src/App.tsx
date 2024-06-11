@@ -1,11 +1,11 @@
 import React from 'react';
+import Itens from './pages/Cardapio/Itens';
 import styles from './pages/Cardapio/Cardapio.module.scss';
 import Buscador from './pages/Cardapio/Buscador';
 import { useState } from 'react';
 import Filtros from './pages/Cardapio/Filtros';
 import Ordenador from './pages/Cardapio/Ordenador';
-import Itens from './pages/Cardapio/Itens';
-import LogoImage from './pages/Cardapio/LogoImage';
+//import Itens from './pages/Cardapio/Itens';
 
 export default function Cardapio() {
   const [busca, setBusca] = useState('');
