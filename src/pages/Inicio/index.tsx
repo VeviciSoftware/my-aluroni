@@ -1,7 +1,7 @@
 import cardapio from '../../data/cardapio.json';
 import styles from './Inicio.module.scss';
 import stylesTema from '../../styles/Tema.module.scss'
-// import nossaCasa from '../../assets/nossaCasa.jpg';
+import casa from '../../assets/sobre/casa.png';
 
 export default function Inicio() {
     let pratosRecomendados = [...cardapio];
@@ -25,7 +25,7 @@ export default function Inicio() {
         </div>
         <h3 className={stylesTema.titulo}>Nossa Casa</h3>
         <div className={styles.nossaCasa}>
-          <img src='' alt='Nossa Casa' />
+          <img src={casa} alt='Nossa Casa' />
           <div className='styles.nossaCasa__endereco'>
             <p>Endereço: Rua dos Alfeneiros, 4</p>
             <p>Telefone: (11) 5555-5555</p>
