@@ -1,28 +1,36 @@
 import cardapio from '../../data/cardapio.json';
+import styles from './Inicio.module.scss';
+import stylesTema from '../../styles/Tema.module.scss'
+// import nossaCasa from '../../assets/nossaCasa.jpg';
 
 export default function Inicio() {
     let pratosRecomendados = [...cardapio];
-
-    pratosRecomendados = pratosRecomendados.sort(() => Math.random() - 0.5).splice(0, 3);
-
+    pratosRecomendados = pratosRecomendados.sort(() => 0.5 - Math.random()).splice(0,3);
     return (
-        <section>
-            <h3>
-                Recomendações da cozinha
-            </h3>
-            <div>
-                {pratosRecomendados.map(item => (
-                    <>
-                        <div key={item.id}>
-                            <img src={item.photo} alt={item.title} />
-                            <h4>{item.title}</h4>
-                        </div>
-                        <button>
-                            Ver mais
-                        </button>
-                    </>
-                ))}
+      <section>
+        <h3 className={stylesTema.titulo}>
+          Recomendações da cozinha
+        </h3>
+        <div className={styles.recomendados}>
+          {pratosRecomendados.map(item => (
+            <div key={item.id} className={styles.recomendado}>
+              <div className={styles.recomendado__imagem}>
+                <img src={item.photo} alt={item.title} />
+              </div>
+              <button className={styles.recomendado__botao}>
+                Ver mais
+              </button>
             </div>
-        </section>
+          ))}
+        </div>
+        <h3 className={stylesTema.titulo}>Nossa Casa</h3>
+        <div className={styles.nossaCasa}>
+          <img src='' alt='Nossa Casa' />
+          <div className='styles.nossaCasa__endereco'>
+            <p>Endereço: Rua dos Alfeneiros, 4</p>
+            <p>Telefone: (11) 5555-5555</p>
+          </div>
+        </div>
+      </section>
     );
-}
+  }
