@@ -2,7 +2,9 @@ import styles from './Prato.module.scss';
 import { useParams, useNavigate } from 'react-router-dom';
 import classNames from 'classnames';
 import cardapio from '../../data/cardapio.json';
-import NotFound from '../NotFound';
+import { lazy } from 'react';
+
+const NotFound = lazy(() => import('../NotFound'));
 
 export default function Prato() {
 

@@ -15,19 +15,19 @@ export default function AppRouter() {
     return (
         <main className='container'>
             <Router>
+                <Menu />
                 <Suspense fallback={<p> Carregando... </p>}>
-                    <Menu />
                     <Routes>
                         <Route path='/' element={<MainPage />}>
                             <Route index element={<Inicio />} />
-                                <Route path='cardapio' element={<Cardapio />} />
-                                <Route path='sobre' element={<Sobre />} />
-                                <Route path='prato/:id' element={<Prato />} />
+                            <Route path='cardapio' element={<Cardapio />} />
+                            <Route path='sobre' element={<Sobre />} />
+                            <Route path='prato/:id' element={<Prato />} />
                         </Route>
                         <Route path='*' element={<NotFound />} />
                     </Routes>
-                    <Footer />
                 </Suspense>
+                <Footer />
             </Router>
         </main>
     );
