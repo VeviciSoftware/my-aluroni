@@ -1,4 +1,4 @@
-# Information about the aplication
+# Application Information
 
 MyAluroni is user-friendly React application designed to a restaurant website. It empowers you to see the menu, meals, filter and know more about the restaurant. Built with React and TypeScript, this project adheres to clean coding principles like DRY (Don't Repeat Yourself) and SRP (Single Responsibility Principle) for maintainability,
 ESLint, React ROunter DOM, useLocation, useParams, Navigate, nested routes and much more routes in React.
